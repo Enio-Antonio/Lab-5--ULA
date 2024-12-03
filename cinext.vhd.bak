@@ -1,0 +1,3 @@
+entity cinext is 	
+	port();
+end cinext;

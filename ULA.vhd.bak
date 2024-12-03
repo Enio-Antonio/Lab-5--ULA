@@ -1,0 +1,25 @@
+entity ULA is
+	port(a, b : bit_vector(5 downto 0); x, y, z : in bit; saida : out bit);
+end ULA;
+
+architecture main of ULA is
+	signal ia : bit_vector(5 downto 0);
+	signal ib : bit_vector(5 downto 0);
+	signal cin : bit;
+	signal enable: bit;
+	
+	component abext is
+		port(an, bn : in bit; x, y, z : in bit; ia, ib : out bit);
+	end component;
+	
+	component cinext is
+		port(x, y, z : in bit; cin : out bit);
+	end component;
+	
+	component calculadora is 
+		port(a, b : bit_vector(5 downto 0); sub : in bit; result : bit_vector(5 downto 0));
+	end component;
+
+begin
+
+end architecture main;
