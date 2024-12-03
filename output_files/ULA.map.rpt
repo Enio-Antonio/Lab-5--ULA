@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ULA
-Tue Dec 03 00:53:50 2024
+Tue Dec 03 20:29:55 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,9 +14,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "calculadora:somador"
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 03 00:53:50 2024           ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 03 20:29:55 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ULA                                             ;
 ; Top-level Entity Name              ; ULA                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 32                                              ;
-;     Total combinational functions  ; 32                                              ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 21                                              ;
+; Total logic elements               ; 26                                              ;
+;     Total combinational functions  ; 26                                              ;
+;     Dedicated logic registers      ; 6                                               ;
+; Total registers                    ; 6                                               ;
+; Total pins                         ; 23                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -155,18 +154,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/ULA.vhd         ;         ;
-; abext.vhd                        ; yes             ; User VHDL File  ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/abext.vhd       ;         ;
-; cinext.vhd                       ; yes             ; User VHDL File  ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/cinext.vhd      ;         ;
-; full_adder.vhd                   ; yes             ; User VHDL File  ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/full_adder.vhd  ;         ;
-; mult.vhd                         ; yes             ; User VHDL File  ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/mult.vhd        ;         ;
-; calculadora.vhd                  ; yes             ; User VHDL File  ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/calculadora.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------+---------+
+; ULA.vhd                          ; yes             ; User VHDL File        ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/ULA.vhd        ;         ;
+; abext.vhd                        ; yes             ; User VHDL File        ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/abext.vhd      ;         ;
+; cinext.vhd                       ; yes             ; User VHDL File        ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/cinext.vhd     ;         ;
+; full_adder.vhd                   ; yes             ; User VHDL File        ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/full_adder.vhd ;         ;
+; reg6.vhd                         ; yes             ; Auto-Found VHDL File  ; C:/Users/enioa/Desktop/Aulas/Lab-5-SD/reg6.vhd       ;         ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -174,48 +172,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 32    ;
+; Estimated Total logic elements              ; 26    ;
 ;                                             ;       ;
-; Total combinational functions               ; 32    ;
+; Total combinational functions               ; 26    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 21    ;
-;     -- 3 input functions                    ; 9     ;
-;     -- <=2 input functions                  ; 2     ;
+;     -- 4 input functions                    ; 17    ;
+;     -- 3 input functions                    ; 8     ;
+;     -- <=2 input functions                  ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 32    ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 20    ;
+;     -- arithmetic mode                      ; 6     ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 6     ;
+;     -- Dedicated logic registers            ; 6     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 21    ;
+; I/O pins                                    ; 23    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; z     ;
-; Maximum fan-out                             ; 17    ;
-; Total fan-out                               ; 121   ;
-; Average fan-out                             ; 2.28  ;
+; Maximum fan-out node                        ; y     ;
+; Maximum fan-out                             ; 19    ;
+; Total fan-out                               ; 118   ;
+; Average fan-out                             ; 2.15  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                 ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-; |ULA                       ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |ULA                                        ; work         ;
-;    |abext:abext1|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext1                           ; work         ;
-;    |abext:abext3|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext3                           ; work         ;
-;    |abext:abext4|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext4                           ; work         ;
-;    |calculadora:somador|   ; 23 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|calculadora:somador                    ; work         ;
-;       |full_adder:f_add_0| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|calculadora:somador|full_adder:f_add_0 ; work         ;
-;       |full_adder:f_add_1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|calculadora:somador|full_adder:f_add_1 ; work         ;
-;       |full_adder:f_add_2| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|calculadora:somador|full_adder:f_add_2 ; work         ;
-;       |full_adder:f_add_3| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|calculadora:somador|full_adder:f_add_3 ; work         ;
-;       |full_adder:f_add_4| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|calculadora:somador|full_adder:f_add_4 ; work         ;
-;       |full_adder:f_add_5| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|calculadora:somador|full_adder:f_add_5 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; |ULA                       ; 26 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |ULA                  ; work         ;
+;    |abext:abext0|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext0     ; work         ;
+;    |abext:abext1|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext1     ; work         ;
+;    |abext:abext2|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext2     ; work         ;
+;    |abext:abext3|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext3     ; work         ;
+;    |abext:abext4|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext4     ; work         ;
+;    |abext:abext5|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|abext:abext5     ; work         ;
+;    |cinext:cinext_0|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|cinext:cinext_0  ; work         ;
+;    |reg6:registrador|      ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA|reg6:registrador ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -224,23 +220,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 6     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "calculadora:somador"                                                                                     ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -258,7 +245,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec 03 00:53:49 2024
+    Info: Processing started: Tue Dec 03 20:29:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ULA -c ULA
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
@@ -273,28 +260,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file cinext.
 Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
     Info (12022): Found design unit 1: full_adder-main
     Info (12023): Found entity 1: full_adder
-Info (12021): Found 2 design units, including 1 entities, in source file mult.vhd
-    Info (12022): Found design unit 1: mult-main
-    Info (12023): Found entity 1: mult
-Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
-    Info (12022): Found design unit 1: calculadora-main
-    Info (12023): Found entity 1: calculadora
 Info (12127): Elaborating entity "ULA" for the top level hierarchy
 Info (12128): Elaborating entity "abext" for hierarchy "abext:abext0"
 Info (12128): Elaborating entity "cinext" for hierarchy "cinext:cinext_0"
-Info (12128): Elaborating entity "calculadora" for hierarchy "calculadora:somador"
-Info (12128): Elaborating entity "mult" for hierarchy "calculadora:somador|mult:mux_0"
-Info (12128): Elaborating entity "full_adder" for hierarchy "calculadora:somador|full_adder:f_add_0"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:somador"
+Warning (12125): Using design file reg6.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: reg6-behav
+    Info (12023): Found entity 1: reg6
+Info (12128): Elaborating entity "reg6" for hierarchy "reg6:registrador"
+Warning (10492): VHDL Process Statement warning at reg6.vhd(15): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 32 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4646 megabytes
-    Info: Processing ended: Tue Dec 03 00:53:50 2024
+    Info (21061): Implemented 26 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4654 megabytes
+    Info: Processing ended: Tue Dec 03 20:29:55 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
